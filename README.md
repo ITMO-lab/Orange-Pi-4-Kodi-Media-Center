@@ -29,11 +29,11 @@
 
 Далее карту необходимо форматировать. Если вы знаете хотя бы 2 таблицы разделов (GPT и MBR), то рекомендую MBR - дефолт для винды. Что же касается файловой системы - можете благополучно забить, ntfs или fat, главное, чтобы карта читалась. 
 
-Форматирование и подготовку SD карты рекомендую проводить в программе: [SDCardFormatterv5_WinEN.zip](https://github.com/ITMO-lab/Orange-Pi-4-Kodi/blob/firmware/tools/SDCardFormatterv5_WinEN.zip)
+Форматирование и подготовку SD карты рекомендую проводить в программе: [SDCardFormatterv5_WinEN.zip](https://github.com/ITMO-lab/Orange-Pi-4-Kodi/raw/firmware/tools/SDCardFormatterv5_WinEN.zip)
 
-После чего можно залить готовый образ (сначала нужно распоковать, например, в WinRAR): [ubuntu_18.04_kodi_orange_pi_4_full.tar.xz](https://github.com/ITMO-lab/Orange-Pi-4-Kodi/blob/firmware/images/ubuntu_18.04_kodi_orange_pi_4_full.tar.xz) 
+После чего можно залить готовый образ (сначала нужно распоковать, например, в WinRAR): [ubuntu_18.04_kodi_orange_pi_4_full.tar.xz](https://github.com/ITMO-lab/Orange-Pi-4-Kodi/raw/firmware/images/ubuntu_18.04_kodi_orange_pi_4_full.tar.xz) 
 
-Заливать можно с помощью программы: [win32diskimager-1.0.0-install.exe](https://github.com/ITMO-lab/Orange-Pi-4-Kodi/blob/firmware/tools/win32diskimager-1.0.0-install.exe) 
+Заливать можно с помощью программы: [win32diskimager-1.0.0-install.exe](https://github.com/ITMO-lab/Orange-Pi-4-Kodi/raw/firmware/tools/win32diskimager-1.0.0-install.exe) 
 
 
 
