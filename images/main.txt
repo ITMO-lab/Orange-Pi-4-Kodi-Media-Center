@@ -5,12 +5,13 @@ sudo apt update
 sudo rm -rf /var/lib/dpkg/lock-frontend
 sudo rm -rf /var/lib/dpkg/lock
 
-echo "libegl-mesa0 hold" | sudo dpkg --set-selections # Kills GPU driver
-echo "libgl1-mesa-dri hold" | sudo dpkg --set-selections # can speed down boot
-echo "libllvm9 hold" | sudo dpkg --set-selections
-
 sudo apt install -y htop gedit nano gparted
-# gparted to -> resize partition
+
+
+
+echo "libegl-mesa0 hold" | sudo dpkg --set-selections # Убивает GPU драйвер
+echo "libgl1-mesa-dri hold" | sudo dpkg --set-selections # После обновления замедляет загрузку ОС 
+echo "libllvm9 hold" | sudo dpkg --set-selections # Важная зависимость libgl1-mesa-dri
 
 sudo apt update
 
@@ -21,11 +22,6 @@ sudo apt install --install-suggests -y kodi
 sudo apt install -y kodi-pvr*
 
 bash -c 'echo "[Desktop Entry]" > ~/.config/autostart/kodi.desktop;echo "Type=Application" >> ~/.config/autostart/kodi.desktop;echo "Name=Kodi" >> ~/.config/autostart/kodi.desktop;echo "Comment=Kodi" >> ~/.config/autostart/kodi.desktop;echo "Exec=kodi-standalone" >> ~/.config/autostart/kodi.desktop;echo "StartupNotify=false" >> ~/.config/autostart/kodi.desktop;echo "Terminal=false" >> ~/.config/autostart/kodi.desktop;echo "Hidden=false" >> ~/.config/autostart/kodi.desktop;'
-
-sudo reboot
-
-# Adding exFat
-sudo apt install -y exfat-fuse exfat-utils
 
 sudo reboot
 
