@@ -1,6 +1,6 @@
 # Kodi медиацентр на основе Orange Pi 4
 
-
+![img](https://cataas.com/cat/gif)
 
 # **ПРЕДИСЛОВИЕ**
 
