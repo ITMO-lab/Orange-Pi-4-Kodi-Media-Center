@@ -1,2 +1,22 @@
-# Orange-Pi-4-Kodi (Media Center with VT, Films and sweet GUI)
+# Kodi медиацентр на основе Orange Pi 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 На данный момент проект в процессе документации
