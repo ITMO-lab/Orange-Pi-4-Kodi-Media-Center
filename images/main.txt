@@ -1,0 +1,70 @@
+sudo bash -c 'echo "[SeatDefaults]" > /etc/lightdm/lightdm.conf;echo "user-session=ubuntu" >> /etc/lightdm/lightdm.conf;echo "greeter-session=lightdm-gtk-greeter" >> /etc/lightdm/lightdm.conf;echo "autologin-user=orangepi" >> /etc/lightdm/lightdm.conf;echo "autologin-user-timeout=0" >> /etc/lightdm/lightdm.conf'
+
+sudo apt update
+
+sudo rm -rf /var/lib/dpkg/lock-frontend
+sudo rm -rf /var/lib/dpkg/lock
+
+echo "libegl-mesa0 hold" | sudo dpkg --set-selections # Kills GPU driver
+echo "libgl1-mesa-dri hold" | sudo dpkg --set-selections # can speed down boot
+echo "libllvm9 hold" | sudo dpkg --set-selections
+
+sudo apt install -y htop gedit nano gparted
+# gparted to -> resize partition
+
+sudo apt update
+
+# On all update request -> N and <No>
+sudo apt upgrade -y
+sudo apt install --install-suggests -y vlc
+sudo apt install --install-suggests -y kodi
+sudo apt install -y kodi-pvr*
+
+bash -c 'echo "[Desktop Entry]" > ~/.config/autostart/kodi.desktop;echo "Type=Application" >> ~/.config/autostart/kodi.desktop;echo "Name=Kodi" >> ~/.config/autostart/kodi.desktop;echo "Comment=Kodi" >> ~/.config/autostart/kodi.desktop;echo "Exec=kodi-standalone" >> ~/.config/autostart/kodi.desktop;echo "StartupNotify=false" >> ~/.config/autostart/kodi.desktop;echo "Terminal=false" >> ~/.config/autostart/kodi.desktop;echo "Hidden=false" >> ~/.config/autostart/kodi.desktop;'
+
+sudo reboot
+
+# Adding exFat
+sudo apt install -y exfat-fuse exfat-utils
+
+sudo reboot
+
+# Далее пойдём устанавливать плагины:
+Плагины и репы:
+https://iptvmaster.ru/best-russian-repositories-kodi/
+Ссылки на репы:
+https://iptvmaster.ru/wp-content/uploads/2018/12/repository.seppius.zip
+https://iptvmaster.ru/wp-content/uploads/2020/01/repository.search.db-1.1.41.zip
+https://github.com/tdw1980/tdw/raw/master/repository.tdw1980-1.0.2.zip
+https://raw.githubusercontent.com/srg70/kodi_repo/master/repo/repository.srg70/repository.srg70-1.1.3.zip
+
+wget https://iptvmaster.ru/wp-content/uploads/2018/12/repository.seppius.zip
+wget https://iptvmaster.ru/wp-content/uploads/2020/01/repository.search.db-1.1.41.zip
+wget https://github.com/tdw1980/tdw/raw/master/repository.tdw1980-1.0.2.zip
+wget https://raw.githubusercontent.com/srg70/kodi_repo/master/repo/repository.srg70/repository.srg70-1.1.3.zip
+
+# Как настраивать Puzzle
+https://ninja-it.ru/nastraivaem-iptv-v-mediapleere-kodi/
+
+
+# Питончик :3
+wget https://livetvkodiserbia.com/kodi/zips/xbmc.python/xbmc.python-2.26.0.zip
+
+
+# Запуск сервисов ТВ
+https://forum.tv-mosaic.com/viewtopic.php?t=501
+
+sudo rm -rf ~/.kodi/userdata/Database/TV*.db ~/.kodi/userdata/Database/Epg*.db
+
+sudo ln /etc/gdb/gdbinit ~/.gdbinit
+
+
+bash -c 'echo "#!/bin/bash" > /usr/bin/kodi-down;echo "killall kodi-standalone" >> /usr/bin/kodi-down;echo "killall kodi" >> /usr/bin/kodi-down;echo "killall kodi.bin" >> /usr/bin/kodi-down;'
+chmod +x /usr/bin/kodi-down
+
+bash -c 'echo "#!/bin/bash" > /usr/bin/kodi-up;echo "/usr/bin/kodi-down" >> /usr/bin/kodi-up;echo "/usr/bin/kodi-standalone &" >> /usr/bin/kodi-up;'
+chmod +x /usr/bin/kodi-up
+
+sudo apt install xbindkeys
+
+https://linux.die.net/man/1/xbindkeys
