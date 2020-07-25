@@ -17,6 +17,10 @@ sudo apt update
 
 # On all update request -> N and <No>
 sudo apt upgrade -y
+
+
+
+
 sudo apt install --install-suggests -y vlc
 sudo apt install --install-suggests -y kodi
 sudo apt install -y kodi-pvr*
@@ -24,6 +28,8 @@ sudo apt install -y kodi-pvr*
 bash -c 'echo "[Desktop Entry]" > ~/.config/autostart/kodi.desktop;echo "Type=Application" >> ~/.config/autostart/kodi.desktop;echo "Name=Kodi" >> ~/.config/autostart/kodi.desktop;echo "Comment=Kodi" >> ~/.config/autostart/kodi.desktop;echo "Exec=kodi-standalone" >> ~/.config/autostart/kodi.desktop;echo "StartupNotify=false" >> ~/.config/autostart/kodi.desktop;echo "Terminal=false" >> ~/.config/autostart/kodi.desktop;echo "Hidden=false" >> ~/.config/autostart/kodi.desktop;'
 
 sudo reboot
+
+
 
 # Далее пойдём устанавливать плагины:
 Плагины и репы:
@@ -55,11 +61,14 @@ sudo rm -rf ~/.kodi/userdata/Database/TV*.db ~/.kodi/userdata/Database/Epg*.db
 sudo ln /etc/gdb/gdbinit ~/.gdbinit
 
 
+
+
 bash -c 'echo "#!/bin/bash" > /usr/bin/kodi-down;echo "killall kodi-standalone" >> /usr/bin/kodi-down;echo "killall kodi" >> /usr/bin/kodi-down;echo "killall kodi.bin" >> /usr/bin/kodi-down;'
 chmod +x /usr/bin/kodi-down
 
 bash -c 'echo "#!/bin/bash" > /usr/bin/kodi-up;echo "/usr/bin/kodi-down" >> /usr/bin/kodi-up;echo "/usr/bin/kodi-standalone &" >> /usr/bin/kodi-up;'
 chmod +x /usr/bin/kodi-up
+
 
 sudo apt install xbindkeys
 
