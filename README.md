@@ -39,9 +39,9 @@
 
 Форматирование и подготовку SD карты рекомендую проводить в программе: [SDCardFormatterv5_WinEN.zip](https://github.com/ITMO-lab/Orange-Pi-4-Kodi-Media-Center/raw/firmware/tools/SDCardFormatterv5_WinEN.zip)
 
-После чего можно залить готовый образ: [ubuntu_18.04_kodi_orange_pi_4_full.zip](https://github.com/ITMO-lab/Orange-Pi-4-Kodi-Media-Center/tree/firmware/images/ubuntu_18.04_kodi_orange_pi_4_full) 
+После чего можно залить готовый образ: [ubuntu_18.04_kodi_orange_pi_4_full.tar.xz](https://github.com/ITMO-lab/Orange-Pi-4-Kodi-Media-Center/releases/download/v1.0.0/ubuntu_18.04_kodi_orange_pi_4_full.tar.xz)
 
-Сначала нужно распаковать [name].img, например, через WinRAR или 7zip. Пытался хранить целый в git lfs, но загрузить файл не получалось из-за бессмысленных ограничений гита, поэтому качать архив придётся по частям либо сразу клонировать/качать [всю ветку firmware](https://github.com/ITMO-lab/Orange-Pi-4-Kodi-Media-Center/archive/firmware.zip)
+Сначала нужно распаковать ubuntu_18.04_kodi_orange_pi_4_full.img, например, через WinRAR или 7zip.
 
 Заливать образ на sd карту можно с помощью программы: [win32diskimager-1.0.0-install.exe](https://github.com/ITMO-lab/Orange-Pi-4-Kodi-Media-Center/raw/firmware/tools/win32diskimager-1.0.0-install.exe) 
 
