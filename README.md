@@ -1,6 +1,6 @@
 # Kodi медиа-центр на основе Orange Pi 4
 
-![img](http://thecatapi.com/api/images/get?type=gif)
+![img](https://github.com/ITMO-lab/Orange-Pi-4-Kodi-Media-Center/blob/images/screenshot-01.jpg)
 
 # **ПРЕДИСЛОВИЕ**
 
